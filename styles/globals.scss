@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-900 text-neutral-50;
+  }
+
+  .btn-sm {
+    @apply h-6 object-contain inline;
+  }
+
+  .btn-md {
+    @apply h-8 object-contain inline;
+  }
+
+  .btn-lg {
+    @apply h-10 object-contain inline;
+  }
+
+  .form-none {
+    @apply outline-none ring-0 ring-transparent focus:ring-0 border-0 focus:border-0 focus:ring-transparent focus:outline-none;
+  }
+}
