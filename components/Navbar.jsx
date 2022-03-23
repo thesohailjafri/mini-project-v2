@@ -6,7 +6,7 @@ export default function Navbar() {
   const setSearchPanelVisiable = useSetRecoilState(SearchPanelVisiable)
 
   return (
-    <div className=" bg-neutral-700 shadow-md">
+    <div className=" bg-sepia-800 shadow-md">
       <div className="container mx-auto flex justify-between px-2 py-3">
         <div className="">
           <img
@@ -17,7 +17,7 @@ export default function Navbar() {
         </div>
         <div className="">
           <SearchIcon
-            className="btn-md cursor-pointer"
+            className="btn-md text-sepia-50 cursor-pointer"
             onClick={() => setSearchPanelVisiable(true)}
           />
         </div>

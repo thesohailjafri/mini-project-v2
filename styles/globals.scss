@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-900 text-neutral-50;
+    @apply bg-sepia-100 text-sepia-900 font-serif overflow-x-hidden;
   }
 
   .btn-sm {
