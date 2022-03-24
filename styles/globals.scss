@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    @apply scrollbar scrollbar-track-sepia-50 scrollbar-thumb-sepia-800;
+  }
+
   body {
     @apply bg-sepia-100 text-sepia-900 font-serif overflow-x-hidden;
   }
@@ -20,6 +24,10 @@
   }
 
   .form-none {
-    @apply outline-none ring-0 ring-transparent focus:ring-0 border-0 focus:border-0 focus:ring-transparent focus:outline-none;
+    @apply outline-none ring-0 ring-transparent focus:ring-0 border-0 focus:border-0 focus:ring-transparent focus:outline-none placeholder-sepia-600 text-sepia-900;
+  }
+
+  .hr-lines {
+    @apply border-sepia-900 py-2 border-2 border-x-0 my-4 border-opacity-50;
   }
 }

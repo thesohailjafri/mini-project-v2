@@ -6,6 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      sepia: {
+        25: '.25',
+        50: '.5',
+        75: '.75',
+      },
       colors: {
         'sepia-50': '#f4f1ed',
         'sepia-100': '#e1dbce',

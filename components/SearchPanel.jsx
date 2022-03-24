@@ -120,9 +120,9 @@ export default function SearchPanel() {
               name=""
               id=""
               placeholder="Search..."
-              className=" grow form-none text-black border-2 !border-sepia-800 focus:border-2 rounded-tl-sm rounded-bl-sm placeholder-sepia-600 font-semibold focus:placeholder-sepia-600"
+              className=" grow form-none text-black border-2 !border-sepia-800 focus:border-2 rounded-tl-sm rounded-bl-sm"
             />
-            <button className=" flex-1 bg-sepia-800 font-semibold rounded-tr-sm rounded-br-sm text-sepia-50 ">
+            <button className=" flex-1 bg-sepia-800 transition-all duration-150 ease-out hover:bg-sepia-900 font-semibold rounded-tr-sm rounded-br-sm text-sepia-50 ">
               Search
             </button>
           </div>
@@ -134,7 +134,7 @@ export default function SearchPanel() {
           <h4 className=" text-lg ">See All</h4>
         </div>
 
-        <div className="inline-flex gap-2 overflow-y-auto pb-4 pt-6 scroll-smooth scrollbar-thin scrollbar-thumb-sepia-800 scrollbar-track-slate-100 mb-14">
+        <div className="inline-flex gap-2 overflow-y-auto pb-4 pt-6 scroll-smooth scrollbar-thin scrollbar-thumb-sepia-800 scrollbar-track-sepia-50 mb-14">
           {data.slice(0, 10).map((item, index) => (
             <SmallArticleCard key={index} data={item} />
           ))}
