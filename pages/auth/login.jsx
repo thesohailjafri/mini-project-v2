@@ -32,10 +32,10 @@ export default function Login() {
         </div>
         <div className="grid gap-1">
           <Link href="/auth/register">
-            <a className=" ">Forget Password?</a>
+            <a className=" ">Forget password?</a>
           </Link>
           <div>
-            Don't have a Account?
+            Don't have a account?
             <Link href="/auth/register">
               <a className=" text-red-800"> Register</a>
             </Link>
