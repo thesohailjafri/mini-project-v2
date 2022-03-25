@@ -7,7 +7,9 @@ export default function Layout({ children }) {
     <div className=" relative">
       <SearchPanel />
       <Navbar />
-      <div className="container mx-auto p-2">{children}</div>
+      <div className="container mx-auto p-2 overflow-hidden shadow-md">
+        {children}
+      </div>
     </div>
   )
 }

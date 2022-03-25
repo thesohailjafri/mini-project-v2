@@ -11,7 +11,11 @@ export default function Navbar() {
     <div className=" bg-sepia-600 shadow-md">
       <div className="container mx-auto flex justify-between px-2 py-3 items-center">
         <Link href="/">
-          <img src="/assets/images/logo.svg" alt="NEWSDAiLY" className=" h-9" />
+          <img
+            src="/assets/images/logo.svg"
+            alt="NEWSDAiLY"
+            className=" h-9 cursor-pointer"
+          />
         </Link>
         <div className="flex gap-2">
           <div>

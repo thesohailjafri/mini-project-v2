@@ -10,7 +10,9 @@
   body {
     @apply bg-sepia-100 text-sepia-900 font-serif overflow-x-hidden;
   }
-
+  .btn-xs {
+    @apply h-4 object-contain inline;
+  }
   .btn-sm {
     @apply h-6 object-contain inline;
   }
@@ -22,6 +24,12 @@
   .btn-lg {
     @apply h-10 object-contain inline;
   }
+  .btn-xl {
+    @apply h-12 object-contain inline;
+  }
+  .btn-2xl {
+    @apply h-14 object-contain inline;
+  }
 
   .form-none {
     @apply outline-none ring-0 ring-transparent focus:ring-0 border-0 focus:border-0 focus:ring-transparent focus:outline-none placeholder-sepia-600 text-sepia-900;
@@ -29,5 +37,16 @@
 
   .hr-lines {
     @apply border-sepia-900 py-2 border-2 border-x-0 my-4 border-opacity-50;
+  }
+  .hr-line {
+    @apply border-sepia-900 border-0 border-t-2 border-opacity-50;
+  }
+
+  .sepia-btn {
+    @apply flex items-center justify-center gap-1 p-2 bg-sepia-800 rounded-sm text-sepia-50 hover:bg-sepia-900 transition-all duration-150 ease-out;
+  }
+
+  .red-btn {
+    @apply flex items-center justify-center gap-1 p-2 bg-red-800 rounded-sm text-sepia-50 hover:bg-red-900 transition-all duration-150 ease-out;
   }
 }

@@ -1,6 +1,6 @@
 import { atom } from 'recoil'
 
 export const SearchPanelVisiable = atom({
-  key: 'SearchPanelVisiable',
+  key: 'SearchPanelVisiableState',
   default: false,
 })
