@@ -1,11 +1,11 @@
 import React from 'react'
 import { SearchIcon, UserIcon } from '@heroicons/react/outline'
 import { useSetRecoilState } from 'recoil'
-import { SearchPanelVisiable } from '../atoms/SearchAtom'
+import { SearchPanelVisiableState } from '../atoms/searchAtom'
 import Image from 'next/image'
 import Link from 'next/link'
 export default function Navbar() {
-  const setSearchPanelVisiable = useSetRecoilState(SearchPanelVisiable)
+  const setSearchPanelVisiable = useSetRecoilState(SearchPanelVisiableState)
 
   return (
     <div className=" bg-sepia-600 shadow-md">

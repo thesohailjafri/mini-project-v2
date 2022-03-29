@@ -30,6 +30,9 @@
   .btn-2xl {
     @apply h-14 object-contain inline;
   }
+  .transition-default {
+    @apply transition-all duration-150 ease-out;
+  }
 
   .form-none {
     @apply outline-none ring-0 ring-transparent focus:ring-0 border-0 focus:border-0 focus:ring-transparent focus:outline-none placeholder-sepia-600 text-sepia-900;
@@ -43,7 +46,11 @@
   }
 
   .sepia-btn {
-    @apply flex items-center justify-center gap-1 p-2 bg-sepia-800 rounded-sm text-sepia-50 hover:bg-sepia-900 transition-all duration-150 ease-out;
+    @apply flex items-center justify-center gap-1 py-2 px-4 bg-sepia-800 rounded-sm text-sepia-50 hover:bg-sepia-900 transition-all duration-150 ease-out;
+  }
+
+  .sepia-outline-btn {
+    @apply flex items-center justify-center gap-1 py-2 px-4 border-2 border-sepia-800 rounded-sm text-sepia-800 hover:text-sepia-900 hover:border-sepia-900 transition-all duration-150 ease-out;
   }
 
   .red-btn {

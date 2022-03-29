@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Login() {
   return (
     <div className=" grid place-content-center">
-      <form className="grid gap-4 w-80 sm:w-96 p-8 bg-sepia-200 rounded-sm mt-28">
+      <form className="grid gap-4 w-80 sm:w-96 p-8 bg-sepia-200 rounded-md shadow-md mt-28">
         <h3 className=" text-3xl mb-3">Login</h3>
         <div className="flex flex-col gap-1 text-xl">
           <label htmlFor="email">Email</label>

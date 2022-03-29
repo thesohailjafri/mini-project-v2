@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
   },
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
 }
 
 module.exports = nextConfig
