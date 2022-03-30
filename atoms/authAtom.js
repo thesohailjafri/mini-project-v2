@@ -1,6 +1,9 @@
 import { atom } from 'recoil'
 
-export const UserInfo = atom({
-  key: 'SearchPanelVisiableState',
-  default: false,
+export const userInfoState = atom({
+  key: 'userInfoState',
+  default: {
+    username: '',
+    email: '',
+  },
 })

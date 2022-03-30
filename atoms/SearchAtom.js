@@ -1,6 +1,6 @@
 import { atom } from 'recoil'
 
-export const SearchPanelVisiableState = atom({
-  key: 'SearchPanelVisiableState',
+export const searchPanelVisiableState = atom({
+  key: 'searchPanelVisiableState',
   default: false,
 })

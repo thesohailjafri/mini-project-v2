@@ -8,8 +8,8 @@ export default function Layout({ children }) {
     <div className=" relative">
       <SearchPanel />
       <Navbar />
-      <div className="container w-full mx-auto px-2 py-8 overflow-hidden shadow-md">
-        <ToastContainer />
+      <div className="container w-full min-h-screen mx-auto px-2 pb-8 p-20 overflow-hidden  md:shadow-xl">
+        <ToastContainer autoClose={4000} />
         {children}
       </div>
     </div>

@@ -15,7 +15,7 @@ import {
 import classNames from 'classnames'
 import React, { useRef, useEffect } from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
-import { SearchPanelVisiableState } from '../atoms/searchAtom'
+import { searchPanelVisiableState } from '../atoms/searchAtom'
 import data from '../json/articles.json'
 import SmallArticleCard from './SearchArticleCard'
 
@@ -83,8 +83,8 @@ const genres = [
 ]
 
 export default function SearchPanel() {
-  const searchVisiable = useRecoilValue(SearchPanelVisiableState)
-  const setSearchPanelVisiable = useSetRecoilState(SearchPanelVisiableState)
+  const searchVisiable = useRecoilValue(searchPanelVisiableState)
+  const setSearchPanelVisiable = useSetRecoilState(searchPanelVisiableState)
   const searchbar = useRef(null)
   useEffect(() => {
     if (searchVisiable) {

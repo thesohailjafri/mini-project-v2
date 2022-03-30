@@ -50,7 +50,7 @@
   }
 
   .sepia-outline-btn {
-    @apply flex items-center justify-center gap-1 py-2 px-4 border-2 border-sepia-800 rounded-sm text-sepia-800 hover:text-sepia-900 hover:border-sepia-900 transition-all duration-150 ease-out;
+    @apply flex items-center bg-transparent hover:bg-sepia-200 justify-center gap-1 py-2 px-4 border-2 border-sepia-800 rounded-sm text-sepia-800 hover:text-sepia-900 hover:border-sepia-900 transition-all duration-150 ease-out;
   }
 
   .red-btn {
