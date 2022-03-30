@@ -56,6 +56,10 @@ const verifyEmail = async (req, res) => {
     throw new CustomError.UnauthenticatedError('Verification Failed')
   }
 
+  if (user.verificationToken === '') {
+    res.status(StatusCodes.OK).json({ msg: 'Verification Completed' })
+  }
+
   if (user.verificationToken !== verificationToken) {
     throw new CustomError.UnauthenticatedError('Verification Failed')
   }
@@ -102,7 +106,7 @@ const login = async (req, res) => {
     }
     refreshToken = existingToken.refreshToken
     attachCookiesToResponse({ res, user: tokenUser, refreshToken })
-    res.status(StatusCodes.OK).json({ user: tokenUser })
+    res.status(StatusCodes.OK).json({ user: tokenUser, refreshToken })
     return
   }
 
@@ -114,8 +118,7 @@ const login = async (req, res) => {
   await Token.create(userToken)
 
   attachCookiesToResponse({ res, user: tokenUser, refreshToken })
-
-  res.status(StatusCodes.OK).json({ user: tokenUser })
+  res.status(StatusCodes.OK).json({ user: tokenUser, refreshToken })
 }
 
 const logout = async (req, res) => {
