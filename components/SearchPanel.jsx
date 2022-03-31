@@ -15,7 +15,7 @@ import {
 import classNames from 'classnames'
 import React, { useRef, useEffect } from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
-import { searchPanelVisiableState } from '../atoms/searchAtom'
+import { searchPanelVisiableState } from './atoms/searchAtom'
 import data from '../json/articles.json'
 import SmallArticleCard from './SearchArticleCard'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { SearchIcon, UserIcon } from '@heroicons/react/outline'
 import { useSetRecoilState } from 'recoil'
-import { searchPanelVisiableState } from '../atoms/searchAtom'
+import { searchPanelVisiableState } from './atoms/searchAtom'
 import Image from 'next/image'
 import Link from 'next/link'
 export default function Navbar() {
