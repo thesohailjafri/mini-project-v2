@@ -1,34 +1,16 @@
 const CustomError = require('../errors')
 const { isTokenValid } = require('../utils')
-const Token = require('../models/Token')
-const { attachCookiesToResponse } = require('../utils')
-
+const jwt = require('jsonwebtoken')
 const authenticateUser = async (req, res, next) => {
-  const { refreshToken, accessToken } = req.signedCookies
   try {
-    if (accessToken) {
-      const payload = isTokenValid(accessToken)
-      req.user = payload.user
-      return next()
+    const bearerHeader = req.headers['authorization']
+    if (!bearerHeader || bearerHeader.split(' ')[0] !== 'Bearer') {
+      throw new error.UnauthorizedError('No token provided')
     }
-    const payload = isTokenValid(refreshToken)
-
-    const existingToken = await Token.findOne({
-      user: payload.user.userId,
-      refreshToken: payload.refreshToken,
-    })
-
-    if (!existingToken || !existingToken?.isValid) {
-      throw new CustomError.UnauthenticatedError('Authentication Invalid')
-    }
-
-    attachCookiesToResponse({
-      res,
-      user: payload.user,
-      refreshToken: existingToken.refreshToken,
-    })
-
-    req.user = payload.user
+    const bearer = bearerHeader.split(' ')
+    const bearerToken = bearer[1]
+    const tokenUser = jwt.verify(bearerToken, process.env.SECRET_KEY)
+    req.user = tokenUser
     next()
   } catch (error) {
     throw new CustomError.UnauthenticatedError('Authentication Invalid')

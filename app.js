@@ -19,18 +19,21 @@ const connectDB = require('./db/connect')
 
 //  routers
 const authRouter = require('./routes/authRoutes')
+const profileRouter = require('./routes/profileRoutes')
+const articleRouter = require('./routes/articleRoutes')
 
 // middleware
 const notFoundMiddleware = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
+const { authenticateUser } = require('./middleware/authentication')
 
 app.set('trust proxy', 1)
-app.use(
-  rateLimiter({
-    windowMs: 15 * 60 * 1000,
-    max: 60,
-  }),
-)
+// app.use(
+//   rateLimiter({
+//     windowMs: 15 * 60 * 1000,
+//     max: 60,
+//   }),
+// )
 app.use(helmet())
 app.use(cors())
 app.use(xss())
@@ -41,8 +44,11 @@ app.use(cookieParser(process.env.JWT_SECRET))
 
 app.use(express.static('./public'))
 app.use(fileUpload())
-
-app.use('/api/v1/auth', authRouter)
+app.use(morgan('tiny'))
+// our routes
+app.use('/api/auth', authRouter)
+app.use('/api/profile', authenticateUser, profileRouter)
+app.use('/api/article', authenticateUser, articleRouter)
 
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
